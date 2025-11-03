@@ -1,0 +1,57 @@
+// Node class
+class Node {
+    int data;
+    Node next;
+
+    // Constructor
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+// LinkedList class
+class linkedlist {
+    Node head;  // starting node
+
+    // Method to add node at the end
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {   // agar list empty hai
+            head = newNode;
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null) {  // last node tak jao
+            temp = temp.next;
+        }
+
+        temp.next = newNode; // last me new node jod do
+    }
+
+    // Method to display list
+    public void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("NULL");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
+        list.insertAtEnd(30);
+        list.insertAtEnd(40);
+
+        list.display();  // Output: 10 -> 20 -> 30 -> 40 -> NULL
+    }
+}
