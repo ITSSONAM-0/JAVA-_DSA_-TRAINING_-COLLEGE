@@ -1,4 +1,4 @@
-// BST Implementation in Java
+
 class Node {
     int key;
     Node left, right;
@@ -12,12 +12,12 @@ class Node {
 public class BST {
     Node root;
 
-    // Constructor
+   
     BST() {
         root = null;
     }
 
-    // Insert a new key
+  
     void insert(int key) {
         root = insertRec(root, key);
     }
@@ -28,7 +28,7 @@ public class BST {
             root = new Node(key);
             return root;
         }
-        // Otherwise, recur down the tree
+       
         if (key < root.key)
             root.left = insertRec(root.left, key);
         else if (key > root.key)
@@ -37,7 +37,7 @@ public class BST {
         return root;
     }
 
-    // Search key in BST
+  
     boolean search(int key) {
         return searchRec(root, key);
     }
@@ -53,7 +53,7 @@ public class BST {
             return searchRec(root.right, key);
     }
 
-    // Delete a node
+   
     void delete(int key) {
         root = deleteRec(root, key);
     }
@@ -67,17 +67,16 @@ public class BST {
         else if (key > root.key)
             root.right = deleteRec(root.right, key);
         else {
-            // Case 1: no child
+            
             if (root.left == null && root.right == null)
                 return null;
 
-            // Case 2: one child
+            
             if (root.left == null)
                 return root.right;
             else if (root.right == null)
                 return root.left;
 
-            // Case 3: two children → inorder successor
             root.key = minValue(root.right);
             root.right = deleteRec(root.right, root.key);
         }
@@ -93,7 +92,7 @@ public class BST {
         return min;
     }
 
-    // Traversals
+    
     void inorder() {
         inorderRec(root);
         System.out.println();
@@ -133,18 +132,11 @@ public class BST {
         }
     }
 
-    // Driver code
+   
     public static void main(String[] args) {
         BST tree = new BST();
 
-        /*
-         * Example tree:
-         * 50
-         * / \
-         * 30 70
-         * / \ / \
-         * 20 40 60 80
-         */
+       
         tree.insert(50);
         tree.insert(30);
         tree.insert(20);
@@ -154,7 +146,7 @@ public class BST {
         tree.insert(80);
 
         System.out.println("Inorder traversal:");
-        tree.inorder(); // Sorted output
+        tree.inorder(); 
 
         System.out.println("Preorder traversal:");
         tree.preorder();
@@ -162,8 +154,8 @@ public class BST {
         System.out.println("Postorder traversal:");
         tree.postorder();
 
-        System.out.println("Search 40: " + tree.search(40)); // true
-        System.out.println("Search 100: " + tree.search(100)); // false
+        System.out.println("Search 40: " + tree.search(40)); 
+        System.out.println("Search 100: " + tree.search(100)); 
 
         System.out.println("Delete 20");
         tree.delete(20);
