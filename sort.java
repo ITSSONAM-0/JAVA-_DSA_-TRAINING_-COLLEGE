@@ -25,7 +25,7 @@ public class SortingVisualizerPro extends JFrame {
         sortingPanel = new SortingPanel();
         add(sortingPanel, BorderLayout.CENTER);
 
-        // Control panel
+        
         JPanel controlPanel = new JPanel();
         controlPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
@@ -92,7 +92,7 @@ public class SortingVisualizerPro extends JFrame {
         }
     }
 
-    // Timer-based Bubble Sort
+   
     private void bubbleSortTimer() {
         timer = new Timer(delay, e -> {
             if (i < array.length - 1) {
@@ -118,7 +118,7 @@ public class SortingVisualizerPro extends JFrame {
         timer.start();
     }
 
-    // Timer-based Selection Sort
+   
     private int minIdx = -1;
     private void selectionSortTimer() {
         i = 0; j = i + 1; minIdx = i;
@@ -146,7 +146,7 @@ public class SortingVisualizerPro extends JFrame {
         timer.start();
     }
 
-    // Timer-based Insertion Sort
+    
     private int key, k;
     private boolean insertionInit = false;
     private void insertionSortTimer() {
@@ -177,7 +177,7 @@ public class SortingVisualizerPro extends JFrame {
         timer.start();
     }
 
-    // Quick Sort (simplified stack-based animation)
+    
     private int[] stackLow, stackHigh;
     private int top = -1;
     private boolean quickInit = false;
@@ -231,7 +231,7 @@ public class SortingVisualizerPro extends JFrame {
         return i + 1;
     }
 
-    // Merge Sort (simplified, recursive with delay)
+    
     private boolean mergeInit = false;
     private void mergeSortTimer() {
         new Thread(() -> {
