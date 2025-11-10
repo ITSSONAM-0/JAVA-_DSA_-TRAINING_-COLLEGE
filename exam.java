@@ -5,7 +5,7 @@ public class exam {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        // Top Half
+      
         for (int i = n; i >= 1; i--) {
             for (int j = n; j > i; j--)
                 System.out.print(" ");
@@ -14,7 +14,7 @@ public class exam {
             System.out.println();
         }
 
-        // Bottom Half
+       
         for (int i = 2; i <= n; i++) {
             for (int j = n; j > i; j--)
                 System.out.print(" ");
@@ -23,6 +23,6 @@ public class exam {
             System.out.println();
         }
 
-        sc.close(); // ✅ Close scanner to remove warning
+        sc.close(); 
     }
 }
