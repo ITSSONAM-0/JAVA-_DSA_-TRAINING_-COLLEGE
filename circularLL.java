@@ -12,8 +12,7 @@ class circularLL {
     Node head = null;
     Node tail = null;
 
-    // insert kar rahe hai list ,yaha dakh rahe h ki list null v hai kya ager list
-    // null hoga to ye if condition chega nhi else chlega
+    
     public void Insert(int data) {
         Node newnode = new Node(data);
         if (head == null) {
@@ -27,7 +26,7 @@ class circularLL {
         }
     }
 
-    // method bana rahe hai
+
     public void InsertAtSpecific(int key, int data) {
         if (head == null) {
             return;
@@ -47,8 +46,7 @@ class circularLL {
         } while (current != head);
     }
 
-    // display method ,ye sabhi code likhte h kyuki sabhi ko display karnvana hota h
-    // to ye yad kar lo
+    
     public void display() {
         if (head == null) {
             System.err.println("empty list");
