@@ -3,9 +3,9 @@ import java.util.*;
 public class Diamond {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt(); // Odd number lena accha hoga
+        int n = sc.nextInt(); 
 
-        // Top Half
+       
         for (int i = 1; i <= n; i += 2) {
             for (int j = i; j < n; j += 2)
                 System.out.print(" ");
@@ -14,7 +14,7 @@ public class Diamond {
             System.out.println();
         }
 
-        // Bottom Half
+       
         for (int i = n - 2; i >= 1; i -= 2) {
             for (int j = i; j < n; j += 2)
                 System.out.print(" ");
