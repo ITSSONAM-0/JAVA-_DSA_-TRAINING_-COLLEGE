@@ -1,4 +1,4 @@
-// Node class for linked list
+
 class Node {
     char data;
     Node next;
@@ -109,7 +109,7 @@ class ExpressionConverter {
                 sb.setCharAt(i, '(');
         }
 
-        // get postfix of reversed expression
+       
         String postfix = infixToPostfix(sb.toString());
 
         // reverse postfix → prefix
@@ -117,7 +117,7 @@ class ExpressionConverter {
     }
 }
 
-// Main class
+
 public class InfixConversionLL {
     public static void main(String[] args) {
         String infix = "(A-B/C)*(A/K-L)";
